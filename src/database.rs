@@ -4,7 +4,7 @@ use std::collections::HashMap;
 #[derive(Clone, Default)]
 pub struct Database {
     // pool: ConnectionPool,
-    todos: HashMap<i32, Todo>
+    todos: HashMap<i32, Todo>,
 }
 
 impl Database {

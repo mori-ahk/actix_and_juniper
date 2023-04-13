@@ -1,6 +1,6 @@
-use juniper::{graphql_object, GraphQLObject};
-use juniper::EmptySubscription;
 pub use crate::database::Database;
+use juniper::EmptySubscription;
+use juniper::{graphql_object, GraphQLObject};
 
 pub type Schema = juniper::RootNode<'static, QueryRoot, MutationRoot, EmptySubscription<Database>>;
 
@@ -49,5 +49,9 @@ impl MutationRoot {
 }
 
 pub fn schema() -> Schema {
-    Schema::new(QueryRoot, MutationRoot, EmptySubscription::<Database>::new())
+    Schema::new(
+        QueryRoot,
+        MutationRoot,
+        EmptySubscription::<Database>::new(),
+    )
 }
