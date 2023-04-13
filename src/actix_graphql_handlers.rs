@@ -1,3 +1,5 @@
+// All of this class are from juniper-actix example.
+// (https://github.com/graphql-rust/juniper/tree/a648dd727519991c2e3c762af16eac027b2acec2/juniper_actix)
 use actix_web:: {
     FromRequest,
     HttpRequest,
